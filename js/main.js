@@ -4,9 +4,10 @@ $('.slider').slick({
   autoplay:3000,
   dots: true,
 });
-$('.header-top__btn').on('click', function(){
-  $('.menu').addClass('active');
-});
-$('.close-btn').on('click', function(){
-  $('.menu').removeClass('active');
+const btn=document.querySelector('.btn');
+const menu=document.querySelector('.menu');
+
+btn.addEventListener('click', ()=>{
+  btn.classList.toggle('btn-close');
+  menu.classList.toggle('menu-active');
 });
