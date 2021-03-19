@@ -106,7 +106,7 @@ a {
   z-index: 10;
   width: 40px;
   height: 40px;
-  top: 50px;
+  top: 35px;
   right: 100px;
   cursor: pointer;
   background: #fff;
@@ -160,7 +160,7 @@ a {
   z-index: 7;
   background: #000;
   width: 100%;
-  opacity: 1;
+  opacity: 0.5;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -262,6 +262,11 @@ a {
   text-align: center;
 }
 
+.statictics-item__title {
+  color: #B70021;
+  font-size: 28px;
+}
+
 .statistics-item__number {
   font-family: Roboto;
   font-size: 96px;
@@ -273,10 +278,6 @@ a {
   font-family: Roboto Condensed;
   font-size: 24px;
   line-height: 28px;
-}
-
-.statictics-item__descr {
-  color: #B70021;
 }
 
 .statistics-item__num--speed span {
@@ -308,12 +309,24 @@ a {
           align-items: center;
 }
 
+.advantages-inner__img {
+  width: 55%;
+}
+
+.advantages-inner__img img {
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
 .advantages__title {
   font-size: 36px;
   line-height: 42px;
   color: #b70021;
   position: absolute;
   top: 0;
+  margin-bottom: 20px;
 }
 
 .advantages__text {
@@ -325,7 +338,7 @@ a {
 }
 
 .design-img {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .design-img img {
@@ -349,6 +362,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 15px;
   max-width: 570px;
   width: 100%;
@@ -357,6 +373,7 @@ a {
 .design-content__item-num {
   font-size: 42px;
   color: #b70021;
+  margin-right: 10px;
 }
 
 .design-content__item-text {
@@ -367,22 +384,7 @@ a {
 .footer {
   background: -webkit-gradient(linear, left bottom, left top, from(#1c1c69), to(#2b2be0));
   background: linear-gradient(0deg, #1c1c69, #2b2be0);
-  padding: 80px 0 30px;
-}
-
-.footer-btn {
-  padding: 30px 60px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #FFFFFF;
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 105px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.footer-btn:hover {
-  background-color: #770302;
+  padding: 50px 0 30px;
 }
 
 .footer-copy {
@@ -413,14 +415,18 @@ a {
 
 .footer-copy li a:hover {
   color: #770302;
+  text-shadow: 0px 0px 2px #FFFFFF;
 }
 
 @media (max-width: 1220px) {
-  .advantages__text {
+  .advantages-inner__descr {
     padding-left: 20px;
   }
   .design__img img {
     width: 100%;
+  }
+  .btn {
+    right: 50px;
   }
 }
 
@@ -441,7 +447,29 @@ a {
   }
 }
 
-@media (max-width: 930px) {
+@media (max-width: 870px) {
+  .advantages-inner__row--mobile .advantages__text {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 820px) {
+  .statistics-items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .statistics-item {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 770px) {
+  .video {
+    margin-bottom: 50px;
+  }
   .advantages-inner__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -453,8 +481,12 @@ a {
   .advantages__title {
     position: static;
   }
+  .advantages-inner__img {
+    width: 600px;
+  }
   .advantages-inner__descr {
     text-align: center;
+    padding-left: 0;
   }
   .advantages__text {
     margin: 25px auto;
@@ -471,19 +503,6 @@ a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-  }
-}
-
-@media (max-width: 820px) {
-  .statistics-items {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .statistics-item {
-    padding: 50px;
   }
 }
 
@@ -506,9 +525,13 @@ a {
     width: 200px;
   }
   .header-content__title {
-    font-size: 70px;
+    font-size: 64px;
     line-height: 85px;
     margin-top: 20px;
+  }
+  .header-content__text {
+    font-size: 18px;
+    width: 250px;
   }
   .header-content__btn {
     padding: 25px 31px;
@@ -523,6 +546,9 @@ a {
   }
   .menu-list ul {
     width: 100%;
+  }
+  .btn {
+    right: 30px;
   }
   .statistics {
     margin: 110px 0 50px;

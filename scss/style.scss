@@ -88,7 +88,7 @@ a{
   z-index: 10;
   width: 40px;
   height: 40px;
-  top: 50px;
+  top: 35px;
   right: 100px;
   cursor: pointer;
   background: #fff;
@@ -127,7 +127,7 @@ a{
   z-index: 7;
   background: #000;
   width:100%;
-  opacity: 1;
+  opacity: 0.5;
   transition:  all 0.5s;
 }
 .menu-active{
@@ -200,6 +200,10 @@ a{
 .statistics-item{
   text-align: center;
 }
+.statictics-item__title{
+  color:#B70021;
+  font-size: 28px;
+}
 .statistics-item__number{
   font-family: Roboto;
   font-size: 96px;
@@ -210,9 +214,6 @@ a{
   font-family: Roboto Condensed;
   font-size: 24px;
   line-height: 28px;
-}
-.statictics-item__descr{
-  color: #B70021;
 }
 .statistics-item__num--speed span{
   display: inline-block;
@@ -235,6 +236,16 @@ a{
     align-items: center;
   }
 
+  &__img{
+    width:55%;
+  }
+  &__img img{
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
 }
 .advantages{
   &__title{
@@ -243,6 +254,7 @@ a{
     color:#b70021;
     position: absolute;
     top:0;
+    margin-bottom: 20px;
   }
   &__text{
     width: 303px;
@@ -252,7 +264,7 @@ a{
   }
 }
 .design-img{
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 .design-img img{
   max-width: 100%;
@@ -264,6 +276,7 @@ a{
   &__item{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-right: 15px;
     max-width: 570px;
     width: 100%;
@@ -271,6 +284,7 @@ a{
   &__item-num{
     font-size: 42px;
     color:#b70021;
+    margin-right: 10px;
   }
   &__item-text{
     max-width: 430px;
@@ -281,21 +295,12 @@ a{
   //background: #690102;
   //background: linear-gradient(45deg, #c50000,  #1c1c69);
   //background: linear-gradient(45deg, #2b2be0, #1c1c69);
+
   background: linear-gradient(0deg, #1c1c69, #2b2be0);
+
+  //background: blue;
   //box-shadow: 0 -200px 100px -120px crimson inset;
-  padding: 80px 0 30px;
-  &-btn{
-    padding: 30px 60px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid #FFFFFF;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 105px;
-    transition:all .5s;
-  }
-  &-btn:hover{
-    background-color: #770302;
-  }
+  padding: 50px 0 30px;
 }
 .footer-copy{
   text-align: center;
@@ -316,18 +321,27 @@ a{
   }
   & li a{
     transition: all .5s;
+
   }
   & li a:hover{
-    color: #770302;
+
+    color:#770302;
+    text-shadow: 0px 0px 2px #FFFFFF;
   }
 
 }
+
+//
+
 @media(max-width:1220px){
-  .advantages__text{
+  .advantages-inner__descr{
       padding-left: 20px;
   }
   .design__img img{
       width: 100%;
+  }
+  .btn{
+    right:50px;
   }
 }
 @media(max-width:1020px){
@@ -346,7 +360,24 @@ a{
   }
 
 }
-@media(max-width:930px){
+@media(max-width:870px){
+  .advantages-inner__row--mobile .advantages__text{
+    margin-top: 20px;
+  }
+}
+@media (max-width:820px){
+  .statistics-items{
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .statistics-item{
+      padding: 50px;
+  }
+}
+@media(max-width:770px){
+  .video{
+    margin-bottom: 50px;
+  }
   .advantages-inner__row{
       flex-wrap:wrap;
       justify-content: center;
@@ -355,8 +386,12 @@ a{
   .advantages__title{
       position: static;
   }
+  .advantages-inner__img{
+    width:600px;
+  }
   .advantages-inner__descr{
       text-align: center;
+      padding-left: 0;
   }
   .advantages__text{
       margin: 25px auto;
@@ -369,19 +404,10 @@ a{
       flex-direction: column-reverse;
   }
   // .advantages-inner__row--mobile{
-  // //  flex-direction: column;
-  //  // flex-direction: column-reverse;
+  //  flex-direction: column;
+  //  flex-direction: column-reverse;
   // }
 
-}
-@media (max-width:820px){
-  .statistics-items{
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  .statistics-item{
-      padding: 50px;
-  }
 }
 @media(max-width:650px){
   .advantages-inner__img img{
@@ -400,9 +426,13 @@ a{
       width:200px;
   }
   .header-content__title{
-      font-size: 70px;
+      font-size: 64px;
       line-height: 85px;
       margin-top:20px;
+  }
+  .header-content__text{
+    font-size:18px;
+    width: 250px;
   }
   .header-content__btn{
     padding: 25px 31px;
@@ -417,6 +447,9 @@ a{
   }
   .menu-list ul{
       width:100%;
+  }
+  .btn{
+    right:30px;
   }
   .statistics{
       margin:110px 0 50px;
